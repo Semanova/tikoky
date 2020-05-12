@@ -16,15 +16,15 @@ public class ProductPage {
     @FindBy(className = "icon-shopping_cart")
     WebElement basketIcon;
 
-    public void chooseSize(){
-    size.click();
+    public void chooseSize() {
+        size.click();
     }
 
-      public void addToTheBasket(){
-       toTheBasketButton.click();
+    public void addToTheBasket() {
+        toTheBasketButton.click();
     }
 
-    public void openBasketPage(){
+    public void openBasketPage() {
         basketIcon.click();
     }
 

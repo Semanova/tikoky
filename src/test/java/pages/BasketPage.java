@@ -10,25 +10,26 @@ import org.openqa.selenium.support.PageFactory;
 public class BasketPage {
     WebDriver driver;
 
-    @FindBy(className = "checkout_button")
-    WebElement submitOrderButton;
-
-    @FindBy(className = "checkout-total")
-    WebElement price;
+    @FindBy(xpath = "//[@classname='product-name']/a[1]")
+    WebElement productName;
 
     public BasketPage() {
         WebDriverSingleton.getWebdriverInstance();
         PageFactory.initElements(driver, this);
     }
 
-    public String getThePrice() {
-        return price.getText();
+    public String getName(){
+        return productName.getText();
     }
 
-    public void checkThePrice(String expectedPrice) {
-        Assert.assertEquals(expectedPrice, getThePrice());
-        submitOrderButton.click();
+    public void checkProductName(String expectedProductName){
+       Assert.assertEquals(expectedProductName, getName());
     }
+
 }
+
+
+
+
 
 

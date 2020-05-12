@@ -7,7 +7,7 @@ import pages.OrderFormPage;
 
 public class OrderFormSteps {
     @Given("my husband has money")
-    public void myHusbandHasMoney() {
+    public void myHusbandHasMoney(Order myFirstOrder) {
 
         new OrderFormPage().fillOrderInformation(myFirstOrder);
     }

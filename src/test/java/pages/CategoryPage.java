@@ -9,15 +9,15 @@ import org.openqa.selenium.support.PageFactory;
 public class CategoryPage {
     WebDriver driver;
 
-    @FindBy(xpath = "//section[@class='filter']//a[@title='Nové']/span[@class='title']")
-    WebElement categoryNew;
+    @FindBy(xpath = "//[@classname = product_name]")
+    WebElement theMostBeautifulShoes;
 
     public CategoryPage() {
         driver = WebDriverSingleton.getWebdriverInstance();
         PageFactory.initElements(driver, this);
     }
 
-    public void clickOnCategory(){
-       categoryNew.click();
+    public void chooseYourShoes(){
+        theMostBeautifulShoes.click();
     }
 }

@@ -23,11 +23,11 @@ public class AboutMe extends BaseClass {
 
         homePage.openPage();
         homePage.openCategory();
-        categoryPage.clickOnCategory();
+        categoryPage.chooseYourShoes();
         productPage.chooseSize();
         productPage.addToTheBasket();
         productPage.openBasketPage();
-        //basketPage.checkThePrice();
+        basketPage.checkProductName("Spotty Betty");
         orderFormPage.fillOrderInformation(myFirstOrder);
         orderFormPage.agreeAndSubmit();
         paymentPage.choosePaymentMethod();
